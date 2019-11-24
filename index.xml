@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>陆鼎记</title>
+    <link>http://louissay.com/</link>
+    <description>Recent content on 陆鼎记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 24 Nov 2019 23:38:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://louissay.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>练术 | 原来我们的沟通充满“暴力”</title>
+      <link>http://louissay.com/posts/non-violent-communication/</link>
+      <pubDate>Sun, 24 Nov 2019 23:38:23 +0800</pubDate>
+      
+      <guid>http://louissay.com/posts/non-violent-communication/</guid>
+      <description>0. 起因 今天下班后给公司的一位项目经理讲解如何制作一个*合格*的项目管理计划，自认为讲得很透彻：过程循循善诱，从需求、时间、预算、质量把控等各</description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>http://louissay.com/about/</link>
+      <pubDate>Sun, 24 Nov 2019 23:23:15 +0800</pubDate>
+      
+      <guid>http://louissay.com/about/</guid>
+      <description>关于我～</description>
+    </item>
+    
+    <item>
+      <title>练术 | 攻克一句话需求</title>
+      <link>http://louissay.com/posts/conquer-demands-in-one-sentence/</link>
+      <pubDate>Sun, 24 Nov 2019 22:19:44 +0800</pubDate>
+      
+      <guid>http://louissay.com/posts/conquer-demands-in-one-sentence/</guid>
+      <description>练术系列是总结平时遇到的问题，帮助大家武装自己，征服项目。 项目管理包含五大过程、十大领域。 今天要讲的涉及十大知识领域中的沟通管理。 0. 初识一句</description>
+    </item>
+    
+  </channel>
+</rss>

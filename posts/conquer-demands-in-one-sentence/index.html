@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.59.1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>练术 | 攻克一句话需求 | 陆鼎记</title>
+    <meta property="og:title" content="练术 | 攻克一句话需求 - 陆鼎记">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content="2019-11-24T22:19:44&#43;08:00">
+        
+        
+    <meta property="article:modified_time" content="2019-11-24T22:19:44&#43;08:00">
+        
+    <meta name="Keywords" content="golang,go语言,陆鼎记,java,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="练术 | 攻克一句话需求">
+        
+    <meta name="author" content="Louis">
+    <meta property="og:url" content="http://louissay.com/posts/conquer-demands-in-one-sentence/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    
+        <link rel="stylesheet" href="/css/prism.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+<body>
+<header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://louissay.com">
+                        陆鼎记
+                    </a>
+                
+                <p class="description">专注于Java、python、项目管理、软件架构</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://louissay.com">首页</a>
+                    
+                    <a  href="http://louissay.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://louissay.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="body">
+        
+        <div id="virtual_toc_list" style="display: none">
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#0-初识一句话需求">0. 初识一句话需求</a></li>
+<li><a href="#1-如何识别一句话需求">1. 如何识别一句话需求</a></li>
+<li><a href="#2-需求不明确带来的影响">2. 需求不明确带来的影响</a></li>
+<li><a href="#3-如何防范一句话需求">3. 如何防范一句话需求</a></li>
+<li><a href="#4-后记">4. 后记</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        <div id="float_toc_div" style="margin: 10px;border: 1px solid gray;z-index:99999;display: none;">
+            <header style="background-color: #f3f3f3;color: black;border-bottom: 1px solid gray;padding: 10px 10px 10px 10px;">
+                <strong id="toc_btn_open" style="color: black;font-size: large;">目录</strong>
+                <strong id="toc_btn_close" style="color: black;font-size: large;float: right">╳</strong>
+            </header>
+            <div id="toc_list" style="background-color: #f3f3f3;color: black;padding: 10px;">
+        
+            </div>
+        </div>
+        <style type="text/css">
+            #float_toc_div {
+                position: fixed;
+                display: none;
+                 
+                height: auto;
+                font-size: 13px;
+            }
+        
+            #toc_list a:hover,
+            #toc_list a:active {
+                color: #ba3925;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                let tocNavElem = document.getElementById("TableOfContents");
+                let floatTocDivElem = document.getElementById("float_toc_div");
+                let tocListElem = floatTocDivElem.getElementsByTagName('div')[0];
+                let colGroupElem = document.getElementById("body").getElementsByClassName("col-group")[0]
+                let floatTocWidth = (document.body.clientWidth - colGroupElem.offsetWidth) / 2 - 16;
+                var useFloatToc = false;
+
+                if (floatTocWidth >= 100) {
+                    useFloatToc = true;
+                    document.getElementById("toc_list").appendChild(tocNavElem);
+                    floatTocDivElem.style.display = 'block';
+                    floatTocDivElem.style.width = floatTocWidth + 'px';
+                    top();
+                    floatTocDivElem.style.left = '0px';
+
+                    function top() {
+                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
+                            floatTocDivElem.style.top = '0px';
+                        } else {
+                            floatTocDivElem.style.top = window.innerHeight / 9 + 'px';
+                        }
+                    }
+
+                    function ishide() {
+                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
+                            floatTocDivElem.style.top = '0px';
+                        } else {
+                            floatTocDivElem.style.display = 'block';
+                        }
+                    }
+
+                    window.onscroll = function () {
+                        ishide();
+                        if ((document.documentElement.scrollTop != 0) && (floatTocDivElem.style.display == 'block')) {
+                            top();
+                        }
+                    };
+
+                    window.onresize = function () {
+                        ishide();
+                    }
+
+                    document.getElementById("toc_btn_open").addEventListener('click', function () {
+                        switch (tocListElem.style.display) {
+                            case "none":
+                                document.getElementById("toc_btn_close").style.display = "";
+                                tocListElem.style.display = "";
+                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "1px solid gray";
+                                break;
+                            default:
+                                break;
+                        }
+                    }, false);
+
+                    document.getElementById("toc_btn_close").addEventListener('click', function () {
+                        switch (tocListElem.style.display) {
+                            case "":
+                                document.getElementById("toc_btn_close").style.display = "none";
+                                tocListElem.style.display = "none";
+                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "";
+                                break;
+                            default:
+                                break;
+                        }
+                    }, false);
+                } else {
+                    let fixedTocElem = document.getElementsByClassName("toc-article")[0];
+                    fixedTocElem.appendChild(tocNavElem);
+                    fixedTocElem.parentElement.style.display = "";
+                }
+                document.getElementById("virtual_toc_list").remove();
+            };   
+        </script>
+        
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+                <div class="res-cons">
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">练术 | 攻克一句话需求</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2019年11月24日
+                        </date>
+                        
+                        <div class="post-meta">
+                            <span>|</span>
+                            
+                                <span class="meta-category"><a href="http://louissay.com/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">项目管理</a></span>
+                            
+                        </div>
+                        
+                        
+                        <div class="post-meta">
+                            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span> 阅读</span></span>
+                        </div>
+                        
+                        
+                        <div class="clear" style="display: none">
+                            <div class="toc-article">
+                                <div class="toc-title">文章目录</div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-content">
+                            
+
+<p><strong>练术</strong>系列是总结平时遇到的问题，帮助大家武装自己，征服项目。
+项目管理包含五大过程、十大领域。
+今天要讲的涉及十大知识领域中的<strong>沟通管理</strong>。</p>
+
+<h2 id="0-初识一句话需求">0. 初识一句话需求</h2>
+
+<p>首先我们来看看什么是一句话需求：</p>
+
+<blockquote>
+<ul>
+<li>“把这个页面的元素布局改漂亮点，目前用户体验不是很顺”</li>
+<li>“这个功能的接口帮忙封装下，以后要提供给XX平台使用”</li>
+<li>“给我优化下XX功能的逻辑，下周上线”</li>
+<li>“把这个拓扑图整理下”</li>
+</ul>
+</blockquote>
+
+<p>童鞋们，是不是很熟悉？
+简单来说，一句话需求具有非常高的隐蔽性和迷惑性，表面上看都是可以做，但是实际上做出来后可能跟客户的要求有天壤之别。</p>
+
+<h2 id="1-如何识别一句话需求">1. 如何识别一句话需求</h2>
+
+<p>目前很多项目采用敏捷开发的理念，即，从用户故事开始展望一个愿景，然后从用户故事中提取完成这个愿景需要的一些业务或技术上的需求，针对这些需求再具体按照分工或时间粒度拆分成一串相关的任务。
+很多一句话需求的产生，往往就暗藏在这些任务中：没有背景，没有分析，没有评审，直接扔过来，此时的你肯定是一堆“我是谁？”、“我在哪？”、“我要干什么？”吧？。如果你能有这些想法，说明已经算是有经验、有思路的了。
+<strong>偏偏我在实际项目过程中发现，很多小伙伴压根儿连思考这个需求的想法都没有，他们直接就按照自己理解的去干活儿了！OMG！！！</strong>
+因为一句话需求具有很多<strong>替身</strong>，很难从正面概括一句话需求，所以咱们淳朴的技术兄弟才没有一丁点儿防备，但是我们可以从另一个角度去反思一句话需求，这里强哥推荐几个简单的判断方法：</p>
+
+<blockquote>
+<ul>
+<li>涉及界面上的需求，需要明确界面上关键元素、元素属性以及各元素之间位置关系；</li>
+<li>单个后台功能模块，必须要明确功能接口的输入输出规范和处理算法；</li>
+<li>多个功能模块组合的需求，需要明确各功能之间的流程和数据流转关系；</li>
+<li>涉及到业务流程的，需要明确业务流程关系以及各业务节点的逻辑描述；</li>
+</ul>
+</blockquote>
+
+<p>如果达不到以上条件的，可以说这个需求还不算明确，属于<strong>一句话需求</strong>的一种。</p>
+
+<h2 id="2-需求不明确带来的影响">2. 需求不明确带来的影响</h2>
+
+<p>很多IT职场老鸟对技术的掌握已经驾轻就熟、炉火纯青，但是往往对这种一句话需求招架不住，折戟沉沙的也不在少数。
+需求不明带来的最大的弊端就是：已经开发好的功能重新返工！
+这意味着：</p>
+
+<blockquote>
+<ul>
+<li>以前的工作量直接浪费；</li>
+<li>公司人力成本浪费，老板要拍桌子；</li>
+<li>时间的浪费，错失项目的战略最佳节点；</li>
+<li>客户的满意度下降，怨天尤人、拍桌子；</li>
+<li>周而反复的修改，自我怀疑。。。</li>
+</ul>
+</blockquote>
+
+<p>如果一些关键需求和技术上理解不到位，返工带来的时间和成本直接不可接受，这个时候甚至会直接影响项目建设的初始诉求，从而造成项目的彻底失败！
+所以到这里，我们说再怎么强调需求明确都不为过吧？</p>
+
+<h2 id="3-如何防范一句话需求">3. 如何防范一句话需求</h2>
+
+<p>好了，说了这么多一句话需求带来的不良影响，那很多童鞋就会想了解怎么才能避免呢？我们建议从场景上，可以大致分为“主动”和“被动”两种方案。</p>
+
+<p><strong>被动</strong>，顾名思义，就是我们面对客户/产品经理丢过来的需求压力，需要被动进行响应，不做太多处理。此时，我们可以给需求提出者加条件：</p>
+
+<blockquote>
+<ul>
+<li>没有业务背景的需求不接（辅助信息）</li>
+<li>看不到需求价值的不接（可行性论证）</li>
+<li>没有验收标准的需求不接（目标衡量机制）</li>
+<li>频繁更改的需求不接（需求方没有想好）</li>
+</ul>
+</blockquote>
+
+<p>这种策略以“不处理”来应对需求，实属无奈的被动之举。这里的拒绝一不小心会升级，严重的会影响合作（不要以为胡说哦，我遇到的就好几个案例），所以又引申出另一个话题，那就是沟通的技巧，这里不展开说，但是可以先提供几点小的建议：</p>
+
+<blockquote>
+<ul>
+<li>首先，不能说不（Never say no）</li>
+<li>接下来，“好，我接受，但是……”</li>
+<li>然后，提出点要求：“我不保证质量/我不保证时间/我既不保证质量也不保证时间”</li>
+<li>再后来，还是坚持要做，那就：“除非，你砍点需求/延长点时间”</li>
+<li>此时，再优雅地反馈：是否这个需求的价值和必要性都想清楚了，能不能给出一个确定的需求，能不能给出这个需求实现后的验收标准……</li>
+</ul>
+</blockquote>
+
+<p>这样，在我们循序渐进地沟通过程中，倒逼需求方去反思自己的业务需求，从而避免以后的弯路，<strong>“守”</strong>住开发前的最后一道底线。</p>
+
+<p><strong>主动</strong>，对应着另一种“攻”的策略，主动出击，帮助需求方去往真正的目标上去靠近：</p>
+
+<blockquote>
+<ul>
+<li>需求方的长远目标、阶段性目标、近期目标各是什么</li>
+<li>本次提出的需求是需求方的哪个阶段目标，是否真的可以实现他的目标，他是怎么分析的，他的论证是不是合理？</li>
+<li>建设的内容需要积累什么能力来满足需求方</li>
+<li>他为什么会提出一句话需求，是不是没有时间？是不是需求方自己也没有理解需求？</li>
+<li>他的需求源是从哪里来的，他的领导？他的客户？他的同事？</li>
+<li>能不能让我也知道原始需求，至少让我知道他分析需求的方法是正确的，对需求源的理解没有偏差</li>
+</ul>
+</blockquote>
+
+<h2 id="4-后记">4. 后记</h2>
+
+<p>有时，需求方也并不是想为难我们，也想减轻建设的工作量、达到最好的效果（而且很多情况下，需求和开发的利益目标是一致的）。无论是主动还是被动，说到底还是分别从自身方面和需求方面分别分析问题、解决问题，同时在解决过程中不断总结，双方扬长避短，经过一段时间的磨合，当然项目是越做越如鱼得水啦。
+不过，要学会帮助需求方更好地分析问题，这个要求很高，需要对业务有足够的理解和判断。专业与否，其实就取决于咱们应对的策略。</p>
+
+                        </div>
+
+                        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="http://louissay.com">Louis</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="http://louissay.com/posts/conquer-demands-in-one-sentence/">http://louissay.com/posts/conquer-demands-in-one-sentence/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+                        
+
+
+                        <div class="post-meta meta-tags">
+                            
+                            <ul class="clearfix">
+                                
+                                <li><a href="http://louissay.com/tags/%E6%B2%9F%E9%80%9A%E7%AE%A1%E7%90%86">沟通管理</a></li>
+                                
+                                <li><a href="http://louissay.com/tags/%E8%81%8C%E5%9C%BA">职场</a></li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </article>
+                    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= ""
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+                </div>
+            </div>
+            <div id="secondary">
+    <section class="widget">
+        <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://louissay.com">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://louissay.com/posts/non-violent-communication/" title="练术 | 原来我们的沟通充满“暴力”">练术 | 原来我们的沟通充满“暴力”</a>
+    </li>
+    
+    <li>
+        <a href="http://louissay.com/posts/conquer-demands-in-one-sentence/" title="练术 | 攻克一句话需求">练术 | 攻克一句话需求</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=jdg9oj97" title="领取￥1888阿里云产品通用代金券" target="_blank" style="color:red">
+                
+                    <img src="https://img.alicdn.com/tfs/TB1aDXhXpzqK1RjSZFvXXcB7VXa-259-194.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://louissay.com/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://louissay.com/tags/%E6%B2%9F%E9%80%9A%E7%AE%A1%E7%90%86/">沟通管理</a>
+    
+    <a href="http://louissay.com/tags/%E8%81%8C%E5%9C%BA/">职场</a>
+    
+    <a href="http://louissay.com/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="http://louissay.com" title="陆鼎记">陆鼎记</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://google.com" title="google搜索">google搜索</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://louissay.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        &copy; 2019 <a href="http://louissay.com">陆鼎记 By Louis</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="http://louissay.com" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        
+        (function () {
+            $("pre code").parent().addClass("line-numbers")
+        }());
+
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script type="text/javascript" src="/js/prism.js" async="true"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+</body>
+</html>
