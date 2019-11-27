@@ -20,12 +20,12 @@
 
     
 
-    <title>Categories | 陆鼎记</title>
-    <meta property="og:title" content="Categories - 陆鼎记">
+    <title>Categories | 文竹小筑</title>
+    <meta property="og:title" content="Categories - 文竹小筑">
     <meta property="og:type" content="article">
         
         
-    <meta name="Keywords" content="陆鼎记,java,博客,区块链,比特币,BTC,项目管理,python,软件架构,公众号,小程序">
+    <meta name="Keywords" content="文竹小筑,博客,java,python,微服务,项目管理,软件架构,区块链,比特币,BTC,公众号,小程序">
     <meta name="description" content="Categories">
         
     <meta name="author" content="Louis">
@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="http://louissay.com/categories/index.xml" title="陆鼎记" />
+    <link rel="alternate" type="application/rss+xml+xml" href="http://louissay.com/categories/index.xml" title="文竹小筑" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -56,10 +56,10 @@
             <div class="site-name ">
                 
                     <a id="logo" href="http://louissay.com">
-                        陆鼎记
+                        文竹小筑
                     </a>
                 
-                <p class="description">专注于Java、python、项目管理、软件架构</p>
+                <p class="description">天将暮，与尔听风煮酒、戏摆龙门，可否？</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
@@ -93,12 +93,12 @@
                         
                         <li>
                             <span class="date">2019/11/24</span>
-                            <a href="http://louissay.com/posts/non-violent-communication/" title="练术 | 原来我们的沟通充满“暴力”">练术 | 原来我们的沟通充满“暴力”</a>
+                            <a href="http://louissay.com/posts/non-violent-communication/" title="原来我们的沟通充满“暴力”">原来我们的沟通充满“暴力”</a>
                         </li>
                         
                         <li>
                             <span class="date">2019/11/24</span>
-                            <a href="http://louissay.com/posts/conquer-demands-in-one-sentence/" title="练术 | 攻克一句话需求">练术 | 攻克一句话需求</a>
+                            <a href="http://louissay.com/posts/conquer-demands-in-one-sentence/" title="攻克一句话需求">攻克一句话需求</a>
                         </li>
                         
                     </ul>
@@ -109,12 +109,33 @@
 
             <div id="secondary">
     <section class="widget">
-        <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
-      
-      <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="http://louissay.com">
-      <button type="submit" class="submit icon-search"></button>
-</form>
+        <div class="aa-input-container" id="aa-input-container">
+    <input type="text" id="aa-search-input" class="aa-input-search" maxlength="50" placeholder="搜索本站..." name="search" autocomplete="off" />
+    <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+        <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+    </svg>
+</div>
+
+<link rel="stylesheet" href="/css/search.css" />
+
+<script src="http://louissay.com/js/algoliasearch.min.js"></script>
+<script src="http://louissay.com/js/autocomplete.min.js"></script>
+<script>
+var client = algoliasearch("QEE4PPZIKV", "21d1ff3d5b972f56c1be12738aa78303");
+var index = client.initIndex('louissay.com');
+autocomplete('#aa-search-input',
+{ hint: false}, {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 8}),
+    displayKey: 'name',
+    templates: {
+        suggestion: function(suggestion) {
+            console.log(suggestion);
+            return '<span>' + '<a href="/post/' + suggestion.slug + '">' +
+            suggestion._highlightResult.title.value + '</a></span>';
+        }
+    }
+});
+</script>
     </section>
     
     <section class="widget">
@@ -122,11 +143,11 @@
 <ul class="widget-list">
     
     <li>
-        <a href="http://louissay.com/posts/non-violent-communication/" title="练术 | 原来我们的沟通充满“暴力”">练术 | 原来我们的沟通充满“暴力”</a>
+        <a href="http://louissay.com/posts/non-violent-communication/" title="原来我们的沟通充满“暴力”">原来我们的沟通充满“暴力”</a>
     </li>
     
     <li>
-        <a href="http://louissay.com/posts/conquer-demands-in-one-sentence/" title="练术 | 攻克一句话需求">练术 | 攻克一句话需求</a>
+        <a href="http://louissay.com/posts/conquer-demands-in-one-sentence/" title="攻克一句话需求">攻克一句话需求</a>
     </li>
     
 </ul>
@@ -164,6 +185,8 @@
     
     <a href="http://louissay.com/tags/%E6%B2%9F%E9%80%9A%E7%AE%A1%E7%90%86/">沟通管理</a>
     
+    <a href="http://louissay.com/tags/%E7%BB%83%E6%9C%AF/">练术</a>
+    
     <a href="http://louissay.com/tags/%E8%81%8C%E5%9C%BA/">职场</a>
     
     <a href="http://louissay.com/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
@@ -177,7 +200,7 @@
     <ul class="widget-list">
         
         <li>
-            <a target="_blank" href="http://louissay.com" title="陆鼎记">陆鼎记</a>
+            <a target="_blank" href="http://louissay.com" title="文竹小筑">文竹小筑</a>
         </li>
         
         <li>
@@ -200,7 +223,7 @@
 </div>
 <footer id="footer">
     <div class="container">
-        &copy; 2019 <a href="http://louissay.com">陆鼎记 By Louis</a>.
+        &copy; 2019 <a href="http://louissay.com">文竹小筑 By Louis</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="http://louissay.com" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         

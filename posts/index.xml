@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 陆鼎记</title>
+    <title>Posts on 文竹小筑</title>
     <link>http://louissay.com/posts/</link>
-    <description>Recent content in Posts on 陆鼎记</description>
+    <description>Recent content in Posts on 文竹小筑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 24 Nov 2019 23:38:23 +0800</lastBuildDate>
@@ -12,21 +12,21 @@
     
     
     <item>
-      <title>练术 | 原来我们的沟通充满“暴力”</title>
+      <title>原来我们的沟通充满“暴力”</title>
       <link>http://louissay.com/posts/non-violent-communication/</link>
       <pubDate>Sun, 24 Nov 2019 23:38:23 +0800</pubDate>
       
       <guid>http://louissay.com/posts/non-violent-communication/</guid>
-      <description>0. 起因 今天下班后给公司的一位项目经理讲解如何制作一个*合格*的项目管理计划，自认为讲得很透彻：过程循循善诱，从需求、时间、预算、质量把控等各</description>
+      <description>我们和所有对象交流，不管内容是什么，真正能够帮助对方、让对方感受到的，其实就是我们对一件事的积极态度。如果这个都达不到，对方其实什么都听不到。</description>
     </item>
     
     <item>
-      <title>练术 | 攻克一句话需求</title>
+      <title>攻克一句话需求</title>
       <link>http://louissay.com/posts/conquer-demands-in-one-sentence/</link>
       <pubDate>Sun, 24 Nov 2019 22:19:44 +0800</pubDate>
       
       <guid>http://louissay.com/posts/conquer-demands-in-one-sentence/</guid>
-      <description>练术系列是总结平时遇到的问题，帮助大家武装自己，征服项目。 项目管理包含五大过程、十大领域。 今天要讲的涉及十大知识领域中的沟通管理。 0. 初识一句</description>
+      <description>一句话需求具有非常高的隐蔽性和迷惑性，表面上看都是可以做，但是实际上做出来后可能跟需求的本意有天壤之别。</description>
     </item>
     
   </channel>
