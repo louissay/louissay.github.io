@@ -1,0 +1,61 @@
+[
+    {
+        "title": "关于我",
+        "uri": "about",
+        "content": "",
+        "objectID": "about",
+        "description": "louis的经历",
+        "date": "2019-11-24T15:23:15.000Z",
+        "draft": false,
+        "isCJKLanguage": true
+    },
+    {
+        "title": "归档文章列表",
+        "uri": "archives",
+        "content": "",
+        "objectID": "archives",
+        "description": "归档文章列表",
+        "type": "archives"
+    },
+    {
+        "title": "攻克一句话需求",
+        "uri": "posts/conquer-demands-in-one-sentence",
+        "content": "0                                                                                   XX                XX                                                                                                  1                                                                                                                                                                                                                                                                        OMG                                                                                                                                                                                                                                                                                      2               IT                                                                                                                                                                                                                                                                                           3                                                                                                                                                                                                                                                                                                                                                                       Never say no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              4",
+        "objectID": "posts/conquer-demands-in-one-sentence",
+        "date": "2019-11-24T14:19:44.000Z",
+        "draft": false,
+        "toc": true,
+        "isCJKLanguage": true,
+        "categories": [
+            "项目管理"
+        ],
+        "tags": [
+            "沟通管理",
+            "职场",
+            "练术"
+        ],
+        "description": "作为乙方的我们，怎么去成为甲方“肚子里的蛔虫”？",
+        "summary": "一句话需求具有非常高的隐蔽性和迷惑性，表面上看都是可以做，但是实际上做出来后可能跟需求的本意有天壤之别。"
+    },
+    {
+        "title": "原来我们的沟通充满“暴力”",
+        "uri": "posts/non-violent-communication",
+        "content": "0                                                                                                                                                                                                                                                                                                                                      1                                                                                                                                                                                                                                                                                                                                                                               2                                                                                                                                                                                                                                                                                                                                                                                                                                                                      3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   4",
+        "objectID": "posts/non-violent-communication",
+        "date": "2019-11-24T15:38:23.000Z",
+        "draft": false,
+        "toc": true,
+        "isCJKLanguage": true,
+        "categories": [
+            "项目管理"
+        ],
+        "tags": [
+            "沟通管理",
+            "职场",
+            "读书",
+            "练术"
+        ],
+        "description": "交流的目的，是传达爱愿",
+        "summary": "我们和所有对象交流，不管内容是什么，真正能够帮助对方、让对方感受到的，其实就是我们对一件事的积极态度。如果这个都达不到，对方其实什么都听不到。"
+    }
+]
