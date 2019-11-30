@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://localhost:1313/posts/organization-structure-practice-in-2019/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+    
+    <meta name="generator" content="Hugo 0.59.1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <title>2019年公司组织架构调整实践思考 | 陆益思的博客</title>
+    <meta property="og:title" content="2019年公司组织架构调整实践思考 - 陆益思的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content="2019-11-30T15:32:14+08:00">
+        
+        
+    <meta property="article:modified_time" content="2019-11-30T15:32:14+08:00">
+        
+    <meta name="Keywords" content="陆益思的博客,博客,java,微服务,云计算,项目管理,软件架构,区块链,比特币,BTC,公众号,小程序">
+    <meta name="description" content="组织结构的划分，最终目的都是要服务于生产力水平的提升">
+        
+    <meta name="author" content="Louis">
+    <meta property="og:url" content="http://localhost:1313/posts/organization-structure-practice-in-2019/">
+    <link rel="icon" href="http://localhost:1313/favicon.ico?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://localhost:1313/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/normalize.css">
+    
+        <link rel="stylesheet" href="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/prism.css">
+    
+    <link rel="stylesheet" href="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/style.css">
+    <script type="text/javascript" async="" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/analytics.js"></script><script type="text/javascript" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/jquery.min.js"></script>
+
+    
+
+
+    
+    
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://localhost:1313/">
+                        陆益思的博客
+                    </a>
+                
+                <p class="description">天将暮，与吾戏摆龙门，可否？</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://localhost:1313/">首页</a>
+                    
+                    <a href="http://localhost:1313/archives/" title="归档">归档</a>
+                    
+                    <a href="http://localhost:1313/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="body">
+        
+        
+        <div id="float_toc_div" style="margin: 10px; border: 1px solid gray; z-index: 99999; display: block; width: 110.5px; top: 126.444px; left: 0px;">
+            <header style="background-color: #f3f3f3;color: black;border-bottom: 1px solid gray;padding: 10px 10px 10px 10px;">
+                <strong id="toc_btn_open" style="color: black;font-size: large;">目录</strong>
+                <strong id="toc_btn_close" style="color: black;font-size: large;float: right">╳</strong>
+            </header>
+            <div id="toc_list" style="background-color: #f3f3f3;color: black;padding: 10px;">
+        
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">0.基本概念</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#1-%E8%83%8C%E6%99%AF">1.背景</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#2-%E9%A1%B9%E7%9B%AE%E5%9E%8B%E7%BB%84%E7%BB%87">2.项目型组织</a>
+<ul>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#2-1-%E9%A1%B9%E7%9B%AE%E5%9E%8B%E7%BB%84%E7%BB%87%E7%9A%84%E4%BC%98%E7%82%B9">2.1 项目型组织的优点</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#2-2-%E9%A1%B9%E7%9B%AE%E5%9E%8B%E7%BB%84%E7%BB%87%E7%9A%84%E7%BC%BA%E7%82%B9">2.2 项目型组织的缺点</a></li>
+</ul></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#3-%E8%81%8C%E8%83%BD%E5%9E%8B%E7%BB%84%E7%BB%87">3.职能型组织</a>
+<ul>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#3-1-%E8%81%8C%E8%83%BD%E5%9E%8B%E7%BB%84%E7%BB%87%E7%9A%84%E7%89%B9%E7%82%B9">3.1 职能型组织的特点</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#3-2-%E8%81%8C%E8%83%BD%E5%9E%8B%E7%BB%84%E7%BB%87%E7%9A%84%E4%BC%98%E7%82%B9">3.2 职能型组织的优点</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#3-3-%E8%81%8C%E8%83%BD%E5%9E%8B%E7%BB%84%E7%BB%87%E7%9A%84%E7%BC%BA%E7%82%B9">3.3 职能型组织的缺点</a></li>
+</ul></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#4-%E7%9F%A9%E9%98%B5%E5%9E%8B%E7%BB%84%E7%BB%87">4.矩阵型组织</a>
+<ul>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#4-1-%E7%9F%A9%E9%98%B5%E5%9E%8B%E7%BB%84%E7%BB%87%E7%9A%84%E7%89%B9%E7%82%B9">4.1 矩阵型组织的特点</a></li>
+</ul></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#5-%E5%85%AC%E5%8F%B8%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84%E8%BD%AC%E5%9E%8B%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C">5.公司组织架构转型实践经验</a>
+<ul>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#5-1-%E5%85%AC%E5%8F%B8%E8%BD%AC%E5%9E%8B%E7%AE%80%E8%A6%81%E5%8E%86%E7%A8%8B">5.1 公司转型简要历程</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#5-2-%E5%85%AC%E5%8F%B8%E8%BD%AC%E5%9E%8B%E7%9A%84%E6%95%88%E6%9E%9C%E6%B5%85%E6%9E%90">5.2 公司转型的效果浅析</a></li>
+</ul></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#6-%E6%80%9D%E8%80%83%E5%8F%8A%E6%94%B9%E8%BF%9B%E6%80%9D%E8%B7%AF">6.思考及改进思路</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#7-%E4%BB%8E%E6%9B%B4%E6%B7%B1%E5%B1%82%E6%AC%A1%E7%90%86%E8%A7%A3%E7%BB%84%E7%BB%87">7.从更深层次理解组织</a></li>
+<li><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/#8-%E6%80%BB%E7%BB%93">8.总结</a></li>
+</ul></li>
+</ul>
+</nav></div>
+        </div>
+        <style type="text/css">
+            #float_toc_div {
+                position: fixed;
+                display: none;
+                 
+                height: auto;
+                font-size: 13px;
+            }
+        
+            #toc_list a:hover,
+            #toc_list a:active {
+                color: #ba3925;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                let tocNavElem = document.getElementById("TableOfContents");
+                let floatTocDivElem = document.getElementById("float_toc_div");
+                let tocListElem = floatTocDivElem.getElementsByTagName('div')[0];
+                let colGroupElem = document.getElementById("body").getElementsByClassName("col-group")[0]
+                let floatTocWidth = (document.body.clientWidth - colGroupElem.offsetWidth) / 2 - 16;
+                var useFloatToc = false;
+
+                if (floatTocWidth >= 100) {
+                    useFloatToc = true;
+                    document.getElementById("toc_list").appendChild(tocNavElem);
+                    floatTocDivElem.style.display = 'block';
+                    floatTocDivElem.style.width = floatTocWidth + 'px';
+                    top();
+                    floatTocDivElem.style.left = '0px';
+
+                    function top() {
+                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
+                            floatTocDivElem.style.top = '0px';
+                        } else {
+                            floatTocDivElem.style.top = window.innerHeight / 9 + 'px';
+                        }
+                    }
+
+                    function ishide() {
+                        if (document.getElementsByClassName('container')[0].offsetWidth <= 720) {
+                            floatTocDivElem.style.top = '0px';
+                        } else {
+                            floatTocDivElem.style.display = 'block';
+                        }
+                    }
+
+                    window.onscroll = function () {
+                        ishide();
+                        if ((document.documentElement.scrollTop != 0) && (floatTocDivElem.style.display == 'block')) {
+                            top();
+                        }
+                    };
+
+                    window.onresize = function () {
+                        ishide();
+                    }
+
+                    document.getElementById("toc_btn_open").addEventListener('click', function () {
+                        switch (tocListElem.style.display) {
+                            case "none":
+                                document.getElementById("toc_btn_close").style.display = "";
+                                tocListElem.style.display = "";
+                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "1px solid gray";
+                                break;
+                            default:
+                                break;
+                        }
+                    }, false);
+
+                    document.getElementById("toc_btn_close").addEventListener('click', function () {
+                        switch (tocListElem.style.display) {
+                            case "":
+                                document.getElementById("toc_btn_close").style.display = "none";
+                                tocListElem.style.display = "none";
+                                floatTocDivElem.getElementsByTagName("header")[0].style.borderBottom = "";
+                                break;
+                            default:
+                                break;
+                        }
+                    }, false);
+                } else {
+                    let fixedTocElem = document.getElementsByClassName("toc-article")[0];
+                    fixedTocElem.appendChild(tocNavElem);
+                    fixedTocElem.parentElement.style.display = "";
+                }
+                document.getElementById("virtual_toc_list").remove();
+            };   
+        </script>
+        
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+                <div class="res-cons">
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">2019年公司组织架构调整实践思考</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2019年11月30日
+                        </date>
+                        
+                        <div class="post-meta">
+                            <span>|</span>
+                            
+                                <span class="meta-category"><a href="http://localhost:1313/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">项目管理</a></span>
+                            
+                        </div>
+                        
+                        
+                        <div class="post-meta">
+                            <span id="busuanzi_container_page_pv" style="display: inline;">|<span id="busuanzi_value_page_pv">479</span><span> 阅读</span></span>
+                        </div>
+                        
+                        
+                        <div class="clear" style="display: none">
+                            <div class="toc-article">
+                                <div class="toc-title">文章目录</div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-content">
+                            
+
+<blockquote>
+<p><strong>练术</strong>系列是总结平时遇到的问题，帮助大家武装自己，征服项目。
+<br>
+项目管理包含五大过程、十大领域。
+<br>
+今天要讲的既不属于五大过程组，也不属于十大知识领域，而是<strong>事业环境因素</strong>。</p>
+</blockquote>
+
+<h2 id="0-基本概念">0.基本概念</h2>
+
+<p><strong>事业环境因素</strong>是指项目团队不能控制的，将对项目产生影响、限制或指令作用的各种条件。这些条件可能提高或限制项目管理的灵活性，并可能对项目结果产生积极或消极的影响。</p>
+
+<p><strong>组织结构</strong>就属于事业环境因素的一个类型，其他的事业环境因素类型包括（但不限于）：组织文化、资源地理分布、政府监管或行业标准、人力资源状况、人事管理制度、公司沟通渠道和公司授权系统、项目管理信息系统（如自动化工具、配置管理、信息搜集发布系统等）以及市场条件等。</p>
+
+<p>在组织结构中，服务于项目建设、执行的组织结构我们称之为：<strong>项目组织结构（Project Organization）</strong>，一般项目组织结构分为3种类型：职能型、项目型和矩阵型。下图是组织结构对项目的影响：</p>
+
+<p><img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/organization-structure.jpg" alt="组织结构对项目的影响"></p>
+
+<h2 id="1-背景">1.背景</h2>
+
+<p>我服务的公司是一家创业型互联网公司，主要服务于企业客户数据中心数字化转型建设，公司团队分布在上海、北京、江苏等多个区域，对公司团队的组织结构及管理水平要求较高。</p>
+
+<p>区别于公司的其他团队（如产品研发团队，虽时有接触项目，但是主体工作仍然偏向于单一的产品研发），我所在的交付部门就是典型的项目实施工作，很大程度上就是跟项目打交道，在文中也是从交付的角度来分析组织结构变化对项目交付层面带来的变化。</p>
+
+<p>在2018年之前，公司的产品化水平不高，更多的是依托于项目进行原始案例和功能需求积累，每个项目都需要有各种技能职能的人员（一般IT型公司的技术团队大致有以下职能：产品团队、项目经理团队、研发团队、需求分析团队、测试团队、运维团队等）。在此期间，以项目经理为首、配置齐全的项目团队，能够快、准、狠地推进项目的进展，发挥了重要的作用，并在此基础上迅速形成了两三条产品线。</p>
+
+<p>2018年以来随着项目的增多，多个客户之间的功能需求复用度提升，即在某些环节上不需要专门的职能人员，如果还是按照之前项目型组织来配置人员进行生产，则人力资源会造成不必要的浪费；同时，交付项目的人员数量也在迅速扩大，这在一定程度上为公司进行职能型部门转型提供了人力基础，把各项目上对应职能的人员进行统一组织，有助于相同职能的技能专业化、规模复制化，从而提高整体效率。</p>
+
+<p>调整组织结构的初衷很美好，在调整后的实际效益如何？在哪些方面取得了良好的效果，又在哪些方面存在这不足？要不要继续保持现有的组织结构？</p>
+
+<p>为了更好地总结公司在组织架构调整转型的过程中得失，我首先简单地带大家了解项目型、职能型及矩阵型这几种组织的特点，以及他们分别对应的优缺点（转型的直接目的就是为了获得新组织形式的优点、避免旧组织结构的缺点）；然后通过对比转型初衷与转型实际效果，分析转型过程中的经验教训；最后总结公司后续发展过程中组织结构调整的思路，扬长避短，提高效率。</p>
+
+<h2 id="2-项目型组织">2.项目型组织</h2>
+
+<blockquote>
+<p>在项目型组织中，团队成员通常集中办公（或虚拟协同以达到集中办公效果），组织的大部分资源都用于项目工作，项目经理拥有很大的自主性和职权。项目型组织中经常有被称为“部门”的组织单元，但它们或者直接向项目经理报告，或者为各个项目提供支持服务。</p>
+</blockquote>
+
+<p><img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/project-structure.jpg" alt="项目型组织"></p>
+
+<p>项目型组织完全是为了实现某一单一目标而组建的垂直型组织形式，项目经理在这种组织结构中具有足够的控制力和资源，项目组成员有唯一的领导——项目经理。这种组织结构适用于风险较大的开拓性项目，同时对进度、成本、质量的指标要求也相应的严格，项目比较多时，对人才和规模具有一定的要求。</p>
+
+<h3 id="2-1-项目型组织的优点">2.1 项目型组织的优点</h3>
+
+<p>一般说来，项目型组织结构具有以下优点：</p>
+
+<ul>
+<li>项目经理对项目全权负责，可以根据需要随意调用项目内外部资源；</li>
+<li>目标单一，因此决策的影响因素较少，资源满足后，所有的决策只依据项目本身；</li>
+<li>项目成员也只对项目经理负责，避免了员工多重领导带来的管理成本以及任务切换成本；</li>
+<li>沟通简单，一般项目组属于同一部门，大家目标一致，且一般集中式办公，沟通效率高，从而决策速度也较高；</li>
+<li>文化自治，因为项目团队交流和沟通频繁，也经常一起决策，因此项目组内文化趋同，不容易被不良文化侵蚀；</li>
+</ul>
+
+<h3 id="2-2-项目型组织的缺点">2.2 项目型组织的缺点</h3>
+
+<p>对应于项目型组织特性，在带来以上优点的同时，相应地存在这些缺点：</p>
+
+<ul>
+<li>项目间资源不共享，如果项目经理对资源的把控能力不够，人员、设备等都会造成闲置浪费；</li>
+<li>项目组相对独立，公司政策和文化难以落实，如果团队凝聚力建设不足，则归属感弱；</li>
+<li>成长缺乏连续性，员工的工作经历是跟项目周期强绑定，如果实施的项目周期较短，或者是不同方向的项目，则事业上或专业深度上的积累缺乏连续性；</li>
+<li>项目间知识经验共享较难，如果没有公司层级的统一管理，则不同项目上的经验难以在公司层面复制；</li>
+</ul>
+
+<h2 id="3-职能型组织">3.职能型组织</h2>
+
+<p>顾名思义，职能型组织就是把人员按专业分组，例如，最高层可按专业分为研发、产品、售前、销售、交付等。各专业还可进一步分成更小的职能部门，例如，将交付进一步分为定制后端开发、前端开发、实施、运维、测试等。在职能型组织中，各个部门相互独立地开展各自的项目工作。</p>
+
+<p><img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/functional-structure.jpg" alt="职能型组织"></p>
+
+<h3 id="3-1-职能型组织的特点">3.1 职能型组织的特点</h3>
+
+<p>一般说来，职能型组织有如下特征：</p>
+
+<ul>
+<li><p>各职能部门的管理和执行人员按专业化（趋同或相关）分工，各自有各自的管理职能。每一个职能部门所开展的业务活动将为整个组织服务。
+<br></p></li>
+
+<li><p>直线指挥+同级参谋。整个管理体系分为两类：一类是直线指挥机构和人员，对其直属下级有发号施令的权力；另一类是参谋机构和人员，其职责是为同级直线指挥人员出谋划策，对下级单位不能发号施令，而是起业务上的指导、监督和服务的作用。</p></li>
+
+<li><p>企业管理权力高度集中。由于各个职能部门和人员都只负责某一个方面的职能工作，惟有最高领导层才能纵观企业全局，所以，企业生产经营的决策权必然集中于最高领导层，主要是经理身上。</p></li>
+</ul>
+
+<h3 id="3-2-职能型组织的优点">3.2 职能型组织的优点</h3>
+
+<p>一般说来，职能型组织具有以下优点：</p>
+
+<ul>
+<li>专业性强，对同一职能部门下人员的技能要求深、而非广（相对项目型人员要cover住项目的方方面面而言）；</li>
+<li>方便跨项目积累，因为整个职能部门职能统一，在不同项目中的资源很容易按组织内的规范形成文档、模块组件、功能库等积累，且可执行性比较高；</li>
+<li>专业知识在管理中优势明显，对应职能的管理负责人不用跨技能和专业，在本领域一般权威性较强，员工容易信服；</li>
+<li>新手上手快，大家适用同样的技术、同样的规范、同样的文档，职能部门内部的任何人都可以对新人形成帮助，降低了学习渠道的获得成本；</li>
+<li>稳定性保障，在以项目为主的公司，团队人员往往会有流动，而同一职能的技术专家，可以项目支援，弥补单个人员不稳定带来的风险；</li>
+<li>复用性高，技术专家可以在不同项目之间共享，减少资源浪费；</li>
+</ul>
+
+<h3 id="3-3-职能型组织的缺点">3.3 职能型组织的缺点</h3>
+
+<p>职能型组织的优点很多，但是它也带来了不少缺点，我个人认为这些缺点本质上是<strong>因为职能划分后缺少全局价值观</strong>而引起的，职能型组织缺点如下：</p>
+
+<ul>
+<li>部门墙的诞生，职能内部对职能边界划分更清晰，即：不是岗位职责内的都不做。而在创业成长型公司里，有很多临时性产生的任务是没法提前考虑全面的，一旦遇到这种情况，这些任务会在部门之间打转，无法有效解决；</li>
+<li>项目管理复杂度大幅上升，项目经理对项目资源的把控力度进一步削弱，经常性地会陷入“有心无力”的境地，或者为了维系项目组团队的稳定、磨合和协作，付出的沟通成本也极大地提高；</li>
+<li>项目经理权责不对等，一方面项目经理要鞭策组员产出、对项目整体要负责，职能人员的绩效考核却在部门经理（不能急项目所急），另外激励机制也不受项目经理控制（即只有“大棒”没有“萝卜”），浑水摸鱼现象很严重，难以调动整个团队的积极性；</li>
+<li>职能经理和项目经理双重汇报，任务目标优先级不一致，容易陷入混乱，降低产出效率；
+在项目利益（客户利益）和职能部门利益产生冲突时，职能型组织会因为部门利益容易忽略客户，从而造成满意度下降，进而造成更严重的合作问题；</li>
+<li>资源分配失衡，在职能部门资源不足时，弱势的项目经理往往获取不到对应资源，从而造成项目失败；</li>
+</ul>
+
+<h2 id="4-矩阵型组织">4.矩阵型组织</h2>
+
+<p>在真正施行组织架构调整时，往往不会单一地使用项目性或者职能型组织，而是坚固两者，采用矩阵型组织结构。</p>
+
+<h3 id="4-1-矩阵型组织的特点">4.1 矩阵型组织的特点</h3>
+
+<p>矩阵型组织兼顾职能型和项目性的项目特点。根据职能经理和项目经理的影响力关系，可以将矩阵型组织分为：弱（项目经理）矩阵、平衡（项目经理）矩阵和强（项目经理）矩阵。</p>
+
+<p>即项目经理越强势，越接近项目型组织特征，反之亦然。除了强矩阵型中，项目经理拥有较大的决策权外，其他两种类型，项目经理更多的是作为协调员或者仅仅具有部分决策权/决策建议权。</p>
+
+<p>以下为强矩阵组织结构示意图：</p>
+
+<p><img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/matrix-structure.jpg" alt="强矩阵型组织"></p>
+
+<h2 id="5-公司组织架构转型实践经验">5.公司组织架构转型实践经验</h2>
+
+<h3 id="5-1-公司转型简要历程">5.1 公司转型简要历程</h3>
+
+<p>在意识到单一的项目型组织管理模式不再适用于项目规模高速增长的现状后，公司管理层进行了及时的调整。而且调整的过程也不是一蹴而就的，大概经历了项目型-&gt;职能型-&gt;矩阵型-&gt;部分项目型、部分职能型、部分矩阵型的过程。</p>
+
+<p>为了说明问题，且在不暴露公司具体实施细节的基础上，我仅仅从大概上介绍实现的经验，大致思路是：由大到小、由粗到细、由一般到特殊。</p>
+
+<ol>
+<li>整体按职能初步划分，原来项目组团队的人员，从部门上开始按职责划分；</li>
+<li>职能进一步细化，由于公司分布在多个地区，在按职能划分后，部门职能部门人员仍然较多，为此公司将交付职能进一步细化，比如，将交付按技能划分成开发、实施、测试；</li>
+<li>分区域拆分，对于本地化要求较高、且整体人员较多的交付团队，进一步将按地区再拆分；而另一方面，对于部分职能也按区域进行了划分；</li>
+<li>按照项目交付的特征，对于不需要投入持续性人力的项目，采用职能型组织方式，由不同职能部门组成的特定团队完成；对于有需要驻场持续投入开发人力的，仍然以项目型组织来进行生产交付；对于区域内相似且需要持续投入人力、但人员机动性较高的项目，则采用矩阵型方式组织交付，由区域经理/产品经理组织区域内不同职能部门的人，统筹协作完成。</li>
+<li>按产品化率特征采用不同组织形式，如产品率高的，可以采用职能型组织完成；定制化率高的，且需要驻场的，一般按照项目型进行投入定制等；</li>
+</ol>
+
+<p>综上，公司在充分了解各种组织方式特点的基础上，能够根据不同的项目进行灵活的组织，除了按职能划分组织外，还加上了区域的维度，整体上是采用了职能型组织的框架、局部采用项目型和矩阵型组织的形式。</p>
+
+<h3 id="5-2-公司转型的效果浅析">5.2 公司转型的效果浅析</h3>
+
+<p>由于本人经历了从一开始的纯项目型组织到后来各种组织架构的调整过程，并有幸在部分阶段参与并提供了一些组织调整建议，因此对于组织形式调整带来的效果有一定的直观感受。</p>
+
+<p><strong>效益（改进）：</strong></p>
+
+<ol>
+<li>按职能调整后，职能内部的汇报关系更明确，但是存在非项目经理同部门的职能人员对项目经理的支持不太上心（考核途径问题）；</li>
+<li>部分职能部门的专业能力互补性更强，如将测试人员统一管理后，对标准化产品的测试来说熟悉度更高；</li>
+<li>相对于单个项目组内部管理制度和流程，调整后的项目管理规范和流程更加标准化、统一化，适合在全公司层面推行；</li>
+<li>同一职能部门的凝聚力更强，之前以项目组为维度的团队文化逐步被“分散在各个项目自己人”文化所代替；</li>
+<li>一定程度的资源利用率提升，在部分管理能力较强的职能部门，资源的利用更加节约化，能够实现“有项目任务则派出，无项目任务调回”的目标；</li>
+</ol>
+
+<p><strong>负担（新问题）：</strong></p>
+
+<ol>
+<li>项目经理力不从心，体现在沟通技巧要求提升（对下跨部门同事磨合、对上跨部门协调人员、对外面对客户）、面临压力更大、专业技能要求更高（相关职能缺失或不到位的情况下，项目经理要想办法弥补）；</li>
+<li>责任心不足服务水平下降，因为职能部门仅对本部门岗位负责，而部门岗位的标准跟客户要求不一致时（通常部门标准更低），真正对客户负责的项目经理无法响应客户，客户满意度下降；</li>
+<li>项目凝聚力下降，长期的部门职责推诿、沟通不通畅的情况下，导致部门间矛盾增加、团队无法形成有效凝聚力，员工获得感降低；</li>
+<li>办事效率低下，且无罚则；</li>
+<li>需要领导层介入的时间和成本增加，助长无领导、不办事的风气。</li>
+<li>各职能成员往往服务于多个项目，本意是复用降低成本，但是实际往往多个项目都会出问题；</li>
+</ol>
+
+<h2 id="6-思考及改进思路">6.思考及改进思路</h2>
+
+<p>由于项目型组织相对独立，因此无论是资源的浪费、员工成长的持续性以及知识积累的难度，都具有一定的局限性，也即破坏性较低。而另一方面，不管是单纯的职能型还是矩阵型，由于引入了职能型组织划分，因此势必带来了职能型组织的缺点，也即我说的“由于缺乏对项目整体性考虑而带来的风险”，且这种风险由于关联到多个职能部门，涉及面较项目型要大得多，危害也要大得多。</p>
+
+<p><strong>如何使组织结构能够更好地服务公司、提高执行效率、节约资源成本</strong>是每一个管理者必须思考的问题，我的大概思路就是，既然每种组织形式都有其适用场景，那么我们就要去尽量满足每种组织形式适用的前提假设条件，发挥出这种形式的优点，同时采取必要手段尽量规避对应的缺点。</p>
+
+<p>以下是一些可执行的建议（持续更新）：</p>
+
+<ul>
+<li>职能型组织结构适用于中小型的、产品比较成熟、技能比较单一、生产技术发展较慢、外部环境比较稳定的企业。其经营管理相对简单，部门较少，横向协调的难度小，对适应性的要求较低，因此职能型结构的缺点不突出，而优点却能得到较为充分的发挥；</li>
+<li>在部分需要集权程度较高的职能部门（如财务、人事等），可以适当采用职能型组织；</li>
+<li>释放职能型组织对领导的过分依赖，部分对于领导层决策要求较频繁的事务，可以进行下放，约定好前提条件和决策范围；</li>
+<li>对项目经理适当放权，树立权责对等的责任观和给予配套的激励机制；</li>
+<li>克服部门壁垒，引导部门间利益一致的共同点，促进跨部门合作的可行性，降低部门间沟通成本；</li>
+<li>充分借鉴职能型的机制特性，从公司层面建立统一规范、知识库、文档等，并在必要范畴内推广分享，解决项目型学习渠道孤立的问题；</li>
+<li>建立统一的学习路径和平台，打通项目组间人才成长的问题；</li>
+</ul>
+
+<h2 id="7-从更深层次理解组织">7.从更深层次理解组织</h2>
+
+<p>学过马克思注意政治经济学的人都知道这么一句经典的话：</p>
+
+<blockquote>
+<p>生产力决定生产关系，生产关系要适应生产力的发展，生产关系是生产力发展的形式，生产关系会反作用于生产力。</p>
+</blockquote>
+
+<p>什么是<strong>生产力</strong>？按照恩格斯的观点:从本原看，生产力是具有劳动能力的人和生产资料相结合而形成的改造自然的能力。在这里，我们可以把一些企业经营生产过程中的工作都抽象为企业的生产力，种田、开车、采矿、纺织都是生产力的一种。</p>
+
+<p>什么又是<strong>生产关系</strong>呢？广义的生产关系是指人们在再生产的过程中结成的相互关系，包括生产、分配、交换和消费（当然，消费系人类特有）等诸多关系在内的生产关系体系。</p>
+
+<p>在这里讨论的组织形式，不就是生产关系的一个子集么？因此我们讨论的工作和组织结构，一定也满足生产力和生产关系的论述范畴。我们项目所做的事情、产品研发的成果都是生产力的表现，因此，马克思主义理论对我们的指导意义就是：</p>
+
+<p><strong>要根据项目情况和公司已有资源情况，来合理组织公司的人员结构，以最大限度地提高生产力水平！</strong></p>
+
+<h2 id="8-总结">8.总结</h2>
+
+<p>在公司发展的进程中，面临的问题和发展的现状都在时刻变化，无论是从整体还是局部，组织结构都不是一成不变的。管理者要充分了解各种组织形式的优缺点，识别出主要的矛盾问题，采用适当的组织形式来解决这些问题，而作为组织内的一成员，更应该跳脱出自己所谓的职能圈，去接触新的世界。</p>
+
+<p>不管任何时候，一颗积极向上的心、一份对自我成长的渴望，永远敌得过任何组织形式带来的弊端。</p>
+
+                        </div>
+
+                        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="http://localhost:1313/">Louis</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="http://localhost:1313/posts/organization-structure-practice-in-2019/">http://localhost:1313/posts/organization-structure-practice-in-2019/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br>
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&#39;QR&#39;); if (qr.style.display === &#39;none&#39;) {qr.style.display=&#39;block&#39;;} else {qr.style.display=&#39;none&#39;}">
+        <span>赞赏</span></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/01_WeChatPay.jpeg" alt="WeChat Pay"></a>
+            <p>微信打赏</p>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/01_AliPay.jpeg" alt="Alipay"></a>
+            <p>支付宝打赏</p>
+        </div>
+    </div>
+</div>
+
+
+                        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="http://localhost:1313/posts/non-violent-communication/">原来我们的沟通充满“暴力”</a></li>
+        
+        <li><a href="http://localhost:1313/posts/conquer-demands-in-one-sentence/">攻克一句话需求</a></li>
+        
+        <li><a href="http://localhost:1313/about/">关于我</a></li>
+        
+        <li><a href="http://localhost:1313/posts/my-first-post/">My First Post</a></li>
+        
+        <li><a href="http://localhost:1313/archives/">归档文章列表</a></li>
+        
+    </ul>
+</div>
+
+
+                        <div class="post-meta meta-tags">
+                            
+                            <ul class="clearfix">
+                                
+                                <li><a href="http://localhost:1313/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">项目管理</a></li>
+                                
+                                <li><a href="http://localhost:1313/tags/%E8%81%8C%E5%9C%BA">职场</a></li>
+                                
+                                <li><a href="http://localhost:1313/tags/%E7%BB%83%E6%9C%AF">练术</a></li>
+                                
+                                <li><a href="http://localhost:1313/tags/%E7%BB%84%E7%BB%87%E6%96%87%E5%8C%96">组织文化</a></li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </article>
+                    
+    
+
+    
+    
+    <div class="post bg-white">
+      <div class="utterances" style="height: 268px;">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/utterances.html"></iframe>
+  </div>
+    </div>
+    
+                </div>
+            </div>
+            <div id="secondary">
+    <section class="widget">
+        <div class="aa-input-container" id="aa-input-container">
+    <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="text" id="aa-search-input" class="aa-input-search aa-input" maxlength="50" placeholder="搜索本站..." name="search" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-expanded="false" aria-labelledby="aa-search-input" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Montserrat, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="aa-dataset-1"></div></span></span>
+    <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+        <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z"></path>
+    </svg>
+</div>
+
+<link rel="stylesheet" href="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/search.css">
+
+<script src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/algoliasearch.min.js"></script>
+<script src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/autocomplete.min.js"></script>
+<script>
+var client = algoliasearch("QEE4PPZIKV", "21d1ff3d5b972f56c1be12738aa78303");
+var index = client.initIndex('louissay.com');
+autocomplete('#aa-search-input',
+{ hint: false}, {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 8}),
+    displayKey: 'name',
+    templates: {
+        suggestion: function(suggestion) {
+            console.log(suggestion);
+            return '<span>' + '<a href="/post/' + suggestion.slug + '">' +
+            suggestion._highlightResult.title.value + '</a></span>';
+        }
+    }
+});
+</script>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://localhost:1313/posts/organization-structure-practice-in-2019/" title="2019年公司组织架构调整实践思考">2019年公司组织架构调整实践思考</a>
+    </li>
+    
+    <li>
+        <a href="http://localhost:1313/posts/non-violent-communication/" title="原来我们的沟通充满“暴力”">原来我们的沟通充满“暴力”</a>
+    </li>
+    
+    <li>
+        <a href="http://localhost:1313/posts/conquer-demands-in-one-sentence/" title="攻克一句话需求">攻克一句话需求</a>
+    </li>
+    
+    <li>
+        <a href="http://localhost:1313/posts/my-first-post/" title="My First Post">My First Post</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=wjowsdm5" title="【高价格高返佣】企业级云服务器 1折特惠" target="_blank" style="color:red">
+                
+                    <img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/TB1Gc3zmAL0gK0jSZFxXXXWHVXa-259-194.jpg">
+                
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.aliyun.com/acts/limit-buy?userCode=wjowsdm5" title="【大使渠道专属价】11月特惠 限时2折" target="_blank" style="color:red">
+                
+                    <img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/TB1hblJl7Y2gK0jSZFgXXc5OFXa-750-400.jpg">
+                
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=wjowsdm5" title="【全民云计算 老牌活动】云主机3年付低至3折" target="_blank" style="color:red">
+                
+                    <img src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/TB1KmFynxz1gK0jSZSgXXavwpXa-200-126.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://localhost:1313/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://localhost:1313/tags/%E6%B2%9F%E9%80%9A%E7%AE%A1%E7%90%86/">沟通管理</a>
+    
+    <a href="http://localhost:1313/tags/%E7%BB%83%E6%9C%AF/">练术</a>
+    
+    <a href="http://localhost:1313/tags/%E7%BB%84%E7%BB%87%E6%96%87%E5%8C%96/">组织文化</a>
+    
+    <a href="http://localhost:1313/tags/%E8%81%8C%E5%9C%BA/">职场</a>
+    
+    <a href="http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
+    
+    <a href="http://localhost:1313/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="http://louissay.com/" title="陆益思的博客">陆益思的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://google.com/" title="google搜索">google搜索</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://localhost:1313/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        © 2019 <a href="http://localhost:1313/">陆益思的博客 By Louis</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io/" target="_blank">Hugo</a>.
+        <a href="http://louissay.com/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        
+        (function () {
+            $("pre code").parent().addClass("line-numbers")
+        }());
+
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script type="text/javascript" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/prism.js" async="true"></script>
+    <script src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/MathJax.js" async=""></script>
+
+
+<a id="rocket" href="http://localhost:1313/posts/organization-structure-practice-in-2019/#top"></a>
+<script type="text/javascript" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/totop.js" async=""></script>
+    
+    <script async="" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-153269519-1');
+    </script>
+
+
+
+    <script type="text/javascript" src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/busuanzi.pure.mini.js" async=""></script>
+
+
+
+
+<script data-no-instant="">document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script><script src="./2019年公司组织架构调整实践思考 _ 陆益思的博客_files/livereload.js"></script>
+
+</body></html>
