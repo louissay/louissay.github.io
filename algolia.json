@@ -57,5 +57,35 @@
         ],
         "description": "交流的目的，是传达爱愿",
         "summary": "我们和所有对象交流，不管内容是什么，真正能够帮助对方、让对方感受到的，其实就是我们对一件事的积极态度。如果这个都达不到，对方其实什么都听不到。"
+    },
+    {
+        "title": "2019年公司组织架构调整实践思考",
+        "uri": "posts/organization-structure-practice-in-2019",
+        "content": "0                                                                                                                                                                                                                                                          Project Organization            3                               1                                                                                                                                                                                                         2018                                                          IT                                                                                                                       2018                                                                                                                                                                                                                                                                                                                                                                                                                              2                                                                                                                                                                                                                                                                         2 1                                                                                                                                                                                                                                              2 2                                                                                                                                                                                                                                              3                                                                                                                                       3 1                                                                                                                                                                                                                                                                                               3 2                                                              cover                                                                                                                                                                                                                                                                                             3 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               4                                                          4 1                                                                                                                                                                                              5              5 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   5 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                6                                                                                                                                                                                                                                                                                                  ",
+        "objectID": "posts/organization-structure-practice-in-2019",
+        "date": "2019-11-30T07:32:14.000Z",
+        "draft": false,
+        "toc": true,
+        "isCJKLanguage": true,
+        "markup": "markdown",
+        "categories": [
+            "项目管理"
+        ],
+        "tags": [
+            "项目管理",
+            "职场",
+            "练术",
+            "组织文化"
+        ],
+        "description": "组织结构的划分，最终目的都是要服务于生产力水平的提升",
+        "summary": "自2018年以来，公司对组织结构和工作方式进行了新一轮的调整。经过一年多的实践，我们从最终效果来分析组织结构调整带来的影响和作用，反思后续优化的策略。"
+    },
+    {
+        "title": "搜索",
+        "uri": "search",
+        "content": "",
+        "objectID": "search",
+        "description": "搜索页面",
+        "type": "search"
     }
 ]
